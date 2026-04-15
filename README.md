@@ -29,7 +29,29 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
----
+Real life recommendations often work by combining multiple strategies. One example is "collaborative filtering" which is when the system looks for other users with similar intrests and recommends things that that user likes. Another example is "content based filtering" which is when the system solely focuses on the given user and tracks the attributes/properties of the things they like to recommend other things with similar ones.
+
+The song class consists of the following properties: 
+    id: int
+    title: str
+    artist: str
+    genre: str
+    mood: str
+    energy: float
+    tempo_bpm: float
+    valence: float
+    danceability: float
+    acousticness: float
+    
+Out of those, I will be using the genre, mood, energy, and acousticness in my system
+
+The user profile class consists of the following properties:
+    favorite_genre: str
+    favorite_mood: str
+    target_energy: float
+    likes_acoustic: bool
+
+My recommender will give higher scores to songs with similar properties to the user preferences and choose song recommendations with the highest score.
 
 ## Getting Started
 
