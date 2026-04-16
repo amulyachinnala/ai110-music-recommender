@@ -117,7 +117,7 @@ Examples:
 
 You will go deeper on this in your model card.
 
----
+-Some drawbacks is that it gives a lot of weight to genre so songs with similar moods/energy levels that the user is into might get ignored to prioritize being in the same genre preferred by the user. 
 
 ## Reflection
 
@@ -142,9 +142,9 @@ Combines reflection and model card framing from the Module 3 guidance. :contentR
 
 ## 1. Model Name
 
-Give your recommender a name, for example:
+Give your recommender a name.
 
-> VibeFinder 1.0
+VibeFinder 1.0
 
 ---
 
@@ -153,9 +153,7 @@ Give your recommender a name, for example:
 - What is this system trying to do
 - Who is it for
 
-Example:
-
-> This model suggests 3 to 5 songs from a small catalog based on a user's preferred genre, mood, and energy level. It is for classroom exploration only, not for real users.
+This model suggests k number of songs (decided by user) from a small catalog based on a user's preferred genre, mood, and energy level. It is for classroom exploration only, not for real users.
 
 ---
 
@@ -169,7 +167,11 @@ Describe your scoring logic in plain language.
 
 Try to avoid code in this section, treat it like an explanation to a non programmer.
 
----
+My recommender will give higher scores to songs with similar properties to the user preferences and choose song recommendations with the highest score. Here is my algorithm:
+Genre Match (Weight: 2.0):
+Mood Match (Weight: 1.0)
+Energy Precision (Weight: 1.0)
+Acoustic Preference (Weight: 0.5)
 
 ## 4. Data
 
@@ -180,7 +182,7 @@ Describe your dataset.
 - What kinds of genres or moods are represented
 - Whose taste does this data mostly reflect
 
----
+There are 20 songs in data\songs.csv (10 of which were added, none were removed). All the songs are very mixed and diverse, so they don't really represent reflect a specific taste.
 
 ## 5. Strengths
 
@@ -191,7 +193,7 @@ You can think about:
 - Particular user profiles it served well
 - Simplicity or transparency benefits
 
----
+My recommender works well when the user has a strong preference for a specific genre of music and rarely branches out. It served well in user profiles that only liked songs of their preferred genre.
 
 ## 6. Limitations and Bias
 
@@ -203,7 +205,7 @@ Some prompts:
 - Is it biased toward high energy or one genre by default
 - How could this be unfair if used in a real product
 
----
+Some drawbacks is that it gives a lot of weight to genre so songs with similar moods/energy levels that the user is into might get ignored to prioritize being in the same genre preferred by the user. This could be unfair because even if a user is in a different mood than usual, their song recommendations will not match their current vibes.
 
 ## 7. Evaluation
 
