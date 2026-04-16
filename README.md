@@ -51,7 +51,12 @@ The user profile class consists of the following properties:
     target_energy: float
     likes_acoustic: bool
 
-My recommender will give higher scores to songs with similar properties to the user preferences and choose song recommendations with the highest score.
+My recommender will give higher scores to songs with similar properties to the user preferences and choose song recommendations with the highest score. Here is my algorithm:
+Genre Match (Weight: 2.0):
+Mood Match (Weight: 1.0)
+Energy Precision (Weight: 1.0)
+Acoustic Preference (Weight: 0.5)
+Some drawbacks is that it gives a lot of weight to genre so songs with similar moods/energy levels that the user is into might get ignored to prioritize being in the same genre preferred by the user
 
 ## Getting Started
 
