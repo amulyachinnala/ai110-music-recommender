@@ -58,6 +58,8 @@ Energy Precision (Weight: 1.0)
 Acoustic Preference (Weight: 0.5)
 Some drawbacks is that it gives a lot of weight to genre so songs with similar moods/energy levels that the user is into might get ignored to prioritize being in the same genre preferred by the user
 
+
+
 ## Getting Started
 
 ### Setup
